@@ -68,7 +68,9 @@ class _DetailPageState extends State<DetailPage> {
                           onPressed: () {
                             setState(() {
                               following = !following;
-                              Alerts.showSuccess(context, widget.name);
+                              following
+                                  ? Alerts.showSuccess(context, widget.name)
+                                  : null;
                             });
                           },
                           style: ElevatedButton.styleFrom(
